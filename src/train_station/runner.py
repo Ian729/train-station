@@ -29,7 +29,7 @@ class RunResult:
 
 def run_project(project: Project, workspace_root: Path, *, keep_workspace: bool = False) -> RunResult:
     started = time.monotonic()
-    workspace = workspace_root / _safe_name(project.name)
+    workspace = (workspace_root / _safe_name(project.name)).resolve()
     shutil.rmtree(workspace, ignore_errors=True)
     workspace.parent.mkdir(parents=True, exist_ok=True)
 
@@ -45,7 +45,7 @@ def run_project(project: Project, workspace_root: Path, *, keep_workspace: bool 
 
     try:
         _clone(project, workspace)
-        entrypoint = workspace / project.entrypoint
+        entrypoint = (workspace / project.entrypoint).resolve()
         if not entrypoint.is_file():
             raise FileNotFoundError(f"entrypoint not found: {project.entrypoint}")
 

@@ -1,0 +1,12 @@
+version: 1
+projects: []
+
+# Minimal registration example:
+# projects:
+#   - name: example
+#     repo: https://github.com/example/example.git
+#
+# Optional fields:
+#     revision: main
+#     enabled: true
+#     entrypoint: .trainstation/run.sh

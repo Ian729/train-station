@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 60
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      TRAIN_STATION_REPO: Ian729/train-station
+      REGISTRATION_STATION_REPO: Ian729/train-station
     steps:
       - uses: actions/checkout@v4
 

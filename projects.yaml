@@ -1,12 +1,7 @@
 version: 1
-projects: []
-
-# Minimal registration example:
-# projects:
-#   - name: example
-#     repo: https://github.com/example/example.git
-#
-# Optional fields:
-#     revision: main
-#     enabled: true
-#     entrypoint: .trainstation/run.sh
+projects:
+  - name: registration-office
+    repo: https://github.com/Ian729/registration-office.git
+    revision: main
+    enabled: true
+    entrypoint: .trainstation/run.sh
